@@ -1,0 +1,96 @@
+---
+layout: post
+title: Automating Emails With Data Jar
+date: 2020-05-05 16:43:32.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Shortcuts
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _wpas_done_all: '1'
+  _edit_last: '1'
+  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
+  mf2_syndication: a:0:{}
+
+permalink: "/2020/05/05/automating-emails-with-data-jar/"
+---
+<p><!-- wp:paragraph --></p>
+<p>I don't write code, and I don't know how to script, but I really love the value of automation. This is why iOS Shortcuts is absolutely my jam. And I love that there is such an awesome growing ecosystem around it!</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>With <a href="https://toolboxpro.app/">Toolbox Pro</a>, <a href="https://launchcuts.com/">Launchcuts</a>, <a href="https://www.pushcut.io/">Pushcut</a>, and <a href="https://shortcutify.app/">Shortcutify</a>, one can really expand what iOS Shortcuts can do and how they are executed. I'm super cognizant, though, about what functions of this are "for me", though, as an under-qualified nerd.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>When I first heard about <a href="https://datajar.app/">Data Jar</a>, I didn't really get it. It felt sort of like a Programmer's Thing. Updating a Shortcut of mine that had a dictionary in it, though, it totally came to me, and I had an awesome time <a href="https://www.relay.fm/automators/49">talking about it with David Sparks and Rosemary Orchard on Automators episode 49.</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:more --><br />
+<!--more--><br />
+<!-- /wp:more --></p>
+<p><!-- wp:paragraph --></p>
+<p>What if I could use this dictionary outside of this Shortcut? And if I can do that, what if I built up the amount of information in that dictionary?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Using <a href="https://datajar.app/">Data Jar</a> like this has made the barrier to entry to new Shortcuts so much easier for me, and opened up my creativity.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>An example:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>At work I support a team, and so there is value in having Shortcuts reference my team members. How cool, then, to have a dictionary that stores values referring to discrete aspects of how their data might be useful in, say, emails or our task management systems.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:columns --></p>
+<div class="wp-block-columns"><!-- wp:column --></p>
+<div class="wp-block-column"><!-- wp:image {"id":254,"sizeSlug":"large"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2020/05/E2EEE9E4-E900-4A84-A3A5-5ADE4EA7C06C-scaled-e1588718116993-976x1024.jpeg" alt="" class="wp-image-254" /></figure>
+<p><!-- /wp:image --></div>
+<p><!-- /wp:column --></p>
+<p><!-- wp:column --></p>
+<div class="wp-block-column"><!-- wp:image {"id":255,"sizeSlug":"large"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2020/05/427AD54A-340F-44BF-B78E-0CDCB5027B0B-scaled-e1588718146921-966x1024.jpeg" alt="" class="wp-image-255" /></figure>
+<p><!-- /wp:image --></div>
+<p><!-- /wp:column --></p>
+<p><!-- wp:column --></p>
+<div class="wp-block-column"><!-- wp:image {"id":256,"sizeSlug":"large"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2020/05/B6573F7B-2008-49EA-8314-0ADA007E9F60-scaled-e1588718174112-757x1024.jpeg" alt="" class="wp-image-256" /></figure>
+<p><!-- /wp:image --></div>
+<p><!-- /wp:column --></div>
+<p><!-- /wp:columns --></p>
+<p><!-- wp:paragraph --></p>
+<p>Having each team member's attributes help me automate all kinds of emails and messages:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>First name</li>
+<li>Last name</li>
+<li>Full name</li>
+<li>Email address</li>
+<li>Pronoun</li>
+<li>Specific app API key</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>It's also really neat that Data Jar lets me get values based on simple and readable paths. Like, I can get the value for <code>team.selected_item.email</code> so simply when choosing from a list or passing a bit of text. This becomes easy shorthand for using the right info in a variety of places.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I'm particularly happy about the idea of including pronoun, because it can make auto-generated emails sound more personal:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:quote --></p>
+<blockquote class="wp-block-quote"><p>Dear <code>client</code>,</p>
+<p>Thank you for requesting project <code>project title</code>!</p>
+<p>I have assigned this work to <code>team.chosen item.firstname</code> on my team to work with you on. <code>team.chosen_item.pronoun</code> will be in touch with you to determine and share next steps.</p>
+</blockquote>
+<p><!-- /wp:quote --></p>
+<p><!-- wp:paragraph --></p>
+<p>Of course, that email also cc's <code>team.chosen_item.email</code>, too.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>For bonus marks, using Data Jar means I need only update one spot of team member data changes or if a new member joins the team. Changes in this one spot are instantly reflected in all the Shortcuts. Hooray!</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>So this is one of my most main ways of using <a href="https://datajar.app/">Data Jar</a>, but I'm really interested in hearing how others are putting it to work. Let me know!</p>
+<p><!-- /wp:paragraph --></p>

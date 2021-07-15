@@ -1,0 +1,270 @@
+---
+layout: post
+title: My Reimagined Productivity Home Screen
+date: 2020-11-18 21:25:01.000000000 +00:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Agenda
+- Drafts
+- OmniFocus
+- Personal
+- Shortcuts
+- Strategy
+- Widgets
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
+  mf2_syndication: a:0:{}
+  _wpas_done_all: '1'
+
+permalink: "/2020/11/18/my-reimagined-productivity-home-screen/"
+---
+<p><!-- wp:paragraph --></p>
+<p><strong>Update</strong>: The links for the Get To It and Dashboard widgets have been updated with fixes (addressed an error if no matching OF tasks in Get To It and changed iconography alignment for calendar events in Dashboard). Enjoy!</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:separator --></p>
+<hr class="wp-block-separator" />
+<!-- /wp:separator --></p>
+<p><!-- wp:paragraph --></p>
+<p>Home Screen fever calmed down a bit as iOS 14 wove its way in to my every day. I had settled in to my routines and was living my best widget life.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>And then <a href="https://chartyios.app/">Charty's</a> <a href="https://testflight.apple.com/join/0z4FPzLl">new beta hit</a>. And I reimagined everything.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"ids":[353,355]} --></p>
+<figure class="wp-block-gallery columns-2 is-cropped">
+<ul class="blocks-gallery-grid">
+<li class="blocks-gallery-item">
+<figure><img src="{{ site.baseurl }}/assets/2020/11/BEED6576-B94C-4C13-90C1-338237B96036-473x1024.jpeg" alt="" data-id="353" data-full-url="https://heyscottyj.com/wp-content/uploads/2020/11/BEED6576-B94C-4C13-90C1-338237B96036-scaled.jpeg" data-link="https://heyscottyj.com/?attachment_id=353" class="wp-image-353" /></figure>
+</li>
+<li class="blocks-gallery-item">
+<figure><img src="{{ site.baseurl }}/assets/2020/11/94ECF2E1-B462-4ECE-B9AE-28C7E47FA9B0-473x1024.jpeg" alt="" data-id="355" data-full-url="https://heyscottyj.com/wp-content/uploads/2020/11/94ECF2E1-B462-4ECE-B9AE-28C7E47FA9B0-scaled.jpeg" data-link="https://heyscottyj.com/?attachment_id=355" class="wp-image-355" /></figure>
+</li>
+</ul>
+</figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:more --><br />
+<!--more--><br />
+<!-- /wp:more --></p>
+<p><!-- wp:paragraph --></p>
+<p>With the ability to make ring charts, I pictured Charty as my path to gamifying action. <a href="https://heyscottyj.com/2020/09/14/homescreen-goodness-using-ios-14-and-charty-to-keep-on-track/">I've written in the past about using Charty data to list counts of OmniFocus actions</a>, but now I can count down.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>After playing with the colours of Charty and placing it in the middle of my Home Screen, I thought, "Huh. That screen looks like part of an app." So I opened up WidgetPack and worked more on creating a header widget to lead my screen with, and a revamped widget with OmniFocus actions.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I figured if I can visualize and list my actions, what else could I do? I needed ways to not just see things, but an interface to do things. That led me to adding buttons to the header widget, and then more buttons to run the Shortcuts to refresh the data of these widgets.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Saddened that I couldn't have a calendar widget that suited my needs and aesthetic, I started imagining a second screen that would show upcoming events, as well as counts of and access to more things.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I'm really happy with the result, both in form and in function.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>To break it all down, the rest of this post will go widget by widget, sharing just how each is built and what all each does, and giving you the tools to do this, too. Hopefully, this can help you either customize a similar experience, or just plain implement what I've made. Enjoy!</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Overall</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>This was pretty purpose built for me, so substitutions and edits of what I share here may/will be needed. The apps I use to make the widgets are:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li><a href="https://chartyios.app/">Charty</a> (<a href="https://testflight.apple.com/join/0z4FPzLl">requiring the TestFlight beta of 1.4</a>)</li>
+<li><a href="https://widgetpack.app/">WidgetPack</a></li>
+<li><a href="https://toolboxpro.app/">Toolbox Pro</a></li>
+<li><a href="https://www.omnigroup.com/omnifocus">OmniFocus</a></li>
+<li><a href="https://getdrafts.com/">Drafts</a></li>
+<li><a href="https://agenda.com/">Agenda</a></li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>I'll also note that my intent, like I said, was for this screen to feel like an app. As such, I employed a black wallpaper and designed the widgets as white on black. A white Home Screen, even with the intent to feel app-like just felt like too much.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Header Widget</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Obviously, this WidgetPack widget shares the day and date, which I had originally pegged <a href="https://david-smith.org/apps/">WidgetSmith</a> to do, but I wanted to add functions, which is what those four circles are:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Add new item to OmniFocus</li>
+<li>Start new draft in Drafts</li>
+<li>Refresh the OmniFocus Get To It widget below</li>
+<li>Refresh the Charty chart</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>To make sure it's current, the Shortcut has an automation to run every day at 00:00, which I highly recommend.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:buttons --></p>
+<div class="wp-block-buttons"><!-- wp:button {"style":{"color":{"background":"#0071a1"}},"textColor":"white"} --></p>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background" href="https://www.icloud.com/shortcuts/c0812b08471f431087429abff2b218c2" style="background-color:#0071a1">Download the Header Widget Shortcut</a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></p>
+<p><!-- wp:paragraph --></p>
+<p>I use a Toolbox Pro action here to return home at the end of the flow (this is true for each of these Shortcuts, actually), just so that if I run it, I end up back at it, but this is optional (though you should still support Toolbox Pro for many reasons).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Charty Omni Rings Widget</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>This is the crown jewel of the design, and creates three rings with Charty to show progress based on tasks in OmniFocus:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>[tasks completed today with a due date before 11:59pm] / ([available tasks today with a due date before 11:59pm] + [tasks completed today with a due date before 11:59pm])</li>
+<li>[flagged tasks completed today] / ([available flagged tasks] + [flagged tasks completed today])</li>
+<li>[forecast-tagged tasks completed today] / ([available forecast-tagged tasks] + [forecast-tagged tasks completed today])</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>This is a great visual of my day and its state. One gotcha, though, is that this is a beta, and so doesn't handle zero values elegantly yet. For example, if you have zero flagged tasks, it substitues 100 for the denominator and reports 0/100 complete. I think I'd like to see a closed ring for 0/0 done, but we'll see how this develops.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>The Shortcut does require a particular colour scheme, and I've linked to it below.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:buttons --></p>
+<div class="wp-block-buttons"><!-- wp:button {"style":{"color":{"background":"#0071a1"}},"textColor":"white"} --></p>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background" href="https://www.icloud.com/shortcuts/cb3cd61afe5f43c7b56b3da8392c6c65" style="background-color:#0071a1">Download the Charty Omni Rings Shortcut</a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></p>
+<p><!-- wp:buttons --></p>
+<div class="wp-block-buttons"><!-- wp:button {"style":{"color":{"text":"#0071a1"}},"className":"is-style-outline"} --></p>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-text-color" href="charty://add-theme?name=O-Rings&amp;colors=6E338E,EB5E07,C31717" style="color:#0071a1">Add the O-Ring Colour Scheme to Charty</a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></p>
+<p><!-- wp:paragraph --></p>
+<p>For the widget, I chose to set the left background to 000000 for both light and dark, and the right to 0F0F10. I turn off the title and legend, and the chart takes care of the rest.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"align":"center","id":354,"sizeSlug":"medium"} --></p>
+<div class="wp-block-image">
+<figure class="aligncenter size-medium"><img src="{{ site.baseurl }}/assets/2020/11/4B8F8918-3170-4771-B52B-5BE345044B21-300x295.jpeg" alt="" class="wp-image-354" /></figure>
+</div>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>To keep the chart current, one might want an automation set to run the Shortcut on particular intervals or events. I tried doing it each time OmniFocus is closed, but I trigger many Shortcuts from OmniFocus tasks (as URL schemes), and found that exiting OF to run one Shortcut but automation trying to run another produced less desirable effects.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>OmniFocus Get To It Widget</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://heyscottyj.com/2020/10/04/omnifocus-widgets-2-0-with-widgetpack/">This was very much based on my previous WidgetPack widget work for OmniFocus</a>, but is optimized for number of actions, and I think the design is nicer, too.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Like the Charty widget above it, this grabs available actions that are either due, flagged, or forecast-tagged, but then colours the checkbox indicator for each accordingly to match the Charty colour scheme.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Each action in the widget links to its OmniFocus task, and if there are more tasks that can be shown, the "and x more" line links to a particular perspective.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Unlike other iterations, I specifically designed this widget in these colours, or responding to light/dark mode. I have an aesthetic I wanted, and so that's baked in, but it would be possible to edit this otherwise.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:buttons --></p>
+<div class="wp-block-buttons"><!-- wp:button {"style":{"color":{"background":"#0071a1"}},"textColor":"white"} --></p>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background" href="https://www.icloud.com/shortcuts/e76f63f058744a49b33cca5b1772f4e4" style="background-color:#0071a1">Download the OmniFocus Get To It Widget Shortcut</a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></p>
+<p><!-- wp:paragraph --></p>
+<p>Again, an automation to keep this up to date isn't a bad idea, but of course, the Header Widget has a button to refresh it.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Dashboard Widget</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>I fiddled with this for an awfully long time, but the genesis of this was thinking that if I can count some things with the Charty chart, what else might I count?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>As set up (please edit to your needs!), this WidgetPack widget shows:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Number of Inbox items in OmniFocus (and links to the OmniFocus Inbox)</li>
+<li>Number of available OmniFocus actions tagged with my Waiting tag (and links to my Waiting Perspective)</li>
+<li>Number of available OmniFocus actions tagged with a People tag (and links to my People Perspective)</li>
+<li>Number of drafts in my Drafts Inbox (and links to the search of my Inbox in Drafts)</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>After being able to see those counts. I thought about the buttons I did for the Header widget, and figured this was a good way for me to add more functionality. The buttons:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Run my <a href="https://heyscottyj.com/2019/12/02/the-daily-agenda-shortcut/">Today Shortcut</a> (that links to today's journal entry in Agenda)</li>
+<li>Run my <a href="https://heyscottyj.com/2020/04/02/creating-better-structure-my-digital-bullet-journaling/">Rapid Log Shortcut</a> (part of my Agenda journaling system)</li>
+<li>Run my List Manager Shortcut (I'll share this another day)</li>
+<li>Run my <a href="https://heyscottyj.com/2019/12/02/the-daily-agenda-shortcut/">Daily Journal Shortcut</a> (again, my Agenda-based system)</li>
+<li>Run the Dashboard Shortcut (to refresh the widget's contents)</li>
+<li>Run the Charty Omni Week Widget (to refresh the chart below)</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Phew.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Lastly, I struggled with the best way to see calendar events. I don't like the design of the stock Calendar widget, and it can't be forced in to dark mode to match the rest, so what the heck, I made my own.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Events are shown for the calendar day the Shortcut is run on, but only ones that have not yet occurred/started. As with OmniFocus tasks, each event in the widget links to its event in Calendar (by way of a separate Shortcut, since the Calendar doesn't have a lovely URL scheme of its own). If no events remain, the widget will say so (with a moon, because moons are relaxing).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:buttons --></p>
+<div class="wp-block-buttons"><!-- wp:button {"style":{"color":{"background":"#0071a1"}},"textColor":"white"} --></p>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background" href="https://www.icloud.com/shortcuts/58ca31946a0447f1898996b410161df4" style="background-color:#0071a1">Download the Dashboard Widget Shortcut</a></div>
+<p><!-- /wp:button --></p>
+<p><!-- wp:button {"style":{"color":{"text":"#0071a1"}},"className":"is-style-outline"} --></p>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-text-color" href="https://www.icloud.com/shortcuts/4491a9383d45459d925cbac2fa8202bc" style="color:#0071a1">Download the Calendar Link Shortcut</a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Charty Omni Week Widget</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>I've shared this before, but I wanted to have this on my screen as a clear visual of my accomplishments. This Charty-based widget shows the count of OmniFocus tasks completed today and on the six days prior to today, giving me a sense of my wins.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:buttons --></p>
+<div class="wp-block-buttons"><!-- wp:button {"style":{"color":{"background":"#0071a1"}},"textColor":"white","className":"is-style-fill"} --></p>
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-text-color has-background" href="https://www.icloud.com/shortcuts/4fb44fcefc9648249d6f653dda8ef726" style="background-color:#0071a1">Download the Charty Omni Week Widget Shortcut</a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></p>
+<p><!-- wp:paragraph --></p>
+<p>As with the Charty Omni Rings widget, I set the background to 000000 and I hide the Y axis (relativism is more important to me than absolute numbers, YMMV).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Conclusion</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>And that really is all it! If you've read this far, holy smokes. Thank you. I hope there is material here that you find useful or can adapt to your needs.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I'd love to hear what you think, so feel free to drop a comment here.</p>
+<p><!-- /wp:paragraph --></p>

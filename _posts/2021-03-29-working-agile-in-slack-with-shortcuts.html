@@ -1,0 +1,125 @@
+---
+layout: post
+title: Working Agile in Slack with Shortcuts
+date: 2021-03-29 13:42:31.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Shortcuts
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _last_editor_used_jetpack: block-editor
+  _edit_last: '1'
+  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
+  mf2_syndication: a:0:{}
+  _wpas_done_all: '1'
+
+permalink: "/2021/03/29/working-agile-in-slack-with-shortcuts/"
+---
+<p><!-- wp:paragraph --></p>
+<p>Recently, I was introduced to&nbsp;<a href="https://api.slack.com/block-kit">Block Kit</a>&nbsp;for&nbsp;<a href="https://slack.com">Slack</a>, and I was super pumped to try to work with this. Since my team at work uses agile and scrum for our work processes, and since we sometimes need to scrum through Slack if calendars collide, I though this would be a compelling use case for a block-based solution, and use Shortcuts to help assemble it.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:more --><br />
+<!--more--><br />
+<!-- /wp:more --></p>
+<p><!-- wp:paragraph --></p>
+<p>The tl;dr of Slack Block Kit is that it's basically a big JSON payload that organizes content into a well-structured Slack post with sections, dividers, text, and interactions (like buttons or lists or forms).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:columns --></p>
+<div class="wp-block-columns"><!-- wp:column {"width":"40%"} --></p>
+<div class="wp-block-column" style="flex-basis:40%"><!-- wp:spacer {"height":23} --></p>
+<div style="height:23px" aria-hidden="true" class="wp-block-spacer"></div>
+<p><!-- /wp:spacer --></p>
+<p><!-- wp:image {"id":428,"width":280,"height":416,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large is-resized"><img src="{{ site.baseurl }}/assets/2021/03/BF16F8BF-50B8-4A85-854F-BCE0279B8570-689x1024.jpeg" alt="" class="wp-image-428" width="280" height="416" /></figure>
+<p><!-- /wp:image --></div>
+<p><!-- /wp:column --></p>
+<p><!-- wp:column {"width":"60%"} --></p>
+<div class="wp-block-column" style="flex-basis:60%"><!-- wp:paragraph --></p>
+<p>The way my team scrums, we talk about what we did yesterday, what we're doing today, and calling out flags, roadblocks, or needs for help. Since I operate by a manager schedule and I use&nbsp;<a href="https://www.omnigroup.com/omnifocus">OmniFocus</a>&nbsp;to manage tasks, this basically means I want a post that combines:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>yesterday's calendar events</li>
+<li>today's calendar events</li>
+<li>OmniFocus tasks that are flagged, available, and tagged with "Scrum"</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>I therefore set myself to build an iOS Shortcut. Getting that content is pretty straightforward, and combining it with text to have everything formatted in the right JSON construct is very doable.</p>
+<p><!-- /wp:paragraph --></div>
+<p><!-- /wp:column --></div>
+<p><!-- /wp:columns --></p>
+<p><!-- wp:paragraph --></p>
+<p>Getting integrated with Slack isn't hard, but it's not nothing, either. Fortunately,&nbsp;<a href="https://medium.com/@jakebathman/setting-up-a-slack-app-for-use-with-ios-shortcuts-e8e16b15d0f3">Jake Bathman wrote a fantastic article on Medium</a>&nbsp;that explains the process.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>To make everything run smoothly, I also used&nbsp;<a href="https://datajar.app/">Data Jar</a>, a fantastic app for storing information to be used in Shortcuts, in this Shortcut for a few things:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>I keep the Slack API token in Data Jar, so that I don't accidentally share it (in the shared Shortcut here, it's at key <code>Auth.Slack</code>).</li>
+<li>I keep a dictionary of Slack channels in Data Jar to make it easy to interface with it (keys at <code>Slack.&lt;&lt;channel name>></code>). You can make this dictionary, too, with my <a href="https://www.icloud.com/shortcuts/0696ecc27d7f403ea9d9a4c0ad30ed26">Data Jar Slack Dictionary Shortcut</a> (which I have written about <a href="https://heyscottyj.com/2020/08/26/easier-integration-of-shortcuts-and-slack-with-data-jar/" data-type="post" data-id="298">in a previous post</a>).</li>
+<li>I keep a dictionary about my team (at keys <code>Team.&lt;&lt;name>></code>) and each has a value for <code>SlackAPILink</code>. In this way, I can do a find and replace on the OmniFocus tasks, replacing each member of my team's name with their <code>&lt;@SLACK_API_ID></code>. I love this, because by simply adding someone's name in the task I have in OmniFocus, I will be @ mentioning them in the post that goes to Slack.</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Here are a few other touches that the Shortcut handles for me:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>It is always assumed that "today" is a workday, so if I'm running this on Monday, the calendar from Friday will be shown (instead of the actual previous day, because please no Sunday meetings)</li>
+<li>The events from the previous calendar day and today are presented as lists to select what to include. They're all selected by default, but if I have an event that is confidential or personal, I can easily deselect it to exclude it from the post.</li>
+<li>If no OmniFocus tasks match the criteria, there is alternate content inserted.</li>
+<li>A footer is added to make it clear that the post happened by automation.</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:spacer {"height":16} --></p>
+<div style="height:16px" aria-hidden="true" class="wp-block-spacer"></div>
+<p><!-- /wp:spacer --></p>
+<p><!-- wp:columns --></p>
+<div class="wp-block-columns"><!-- wp:column --></p>
+<div class="wp-block-column"><!-- wp:image {"id":431,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2021/03/B9F3DA34-F400-4791-A9FA-9BFCDC33E206-473x1024.jpeg" alt="" class="wp-image-431" /></figure>
+<p><!-- /wp:image --></div>
+<p><!-- /wp:column --></p>
+<p><!-- wp:column --></p>
+<div class="wp-block-column"><!-- wp:image {"id":430,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2021/03/E68C456E-C8A5-4C5D-890C-9911D49DA6BE-473x1024.jpeg" alt="" class="wp-image-430" /></figure>
+<p><!-- /wp:image --></div>
+<p><!-- /wp:column --></p>
+<p><!-- wp:column --></p>
+<div class="wp-block-column"><!-- wp:image {"id":429,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2021/03/A863812F-1CC7-46E7-B5AC-0E9ACFF01CB6-473x1024.jpeg" alt="" class="wp-image-429" /></figure>
+<p><!-- /wp:image --></div>
+<p><!-- /wp:column --></div>
+<p><!-- /wp:columns --></p>
+<p><!-- wp:paragraph --></p>
+<p>I am pretty certain this Shortcut, considering the above, won't work out of the box as shared, but I hope it provides adequate inspiration and framework for you to get value from. I'd love to hear what you think!</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:buttons {"contentJustification":"center"} --></p>
+<div class="wp-block-buttons is-content-justification-center"><!-- wp:button {"borderRadius":10,"style":{"color":{"background":"#0071a1"}},"textColor":"white","className":"is-style-fill"} --></p>
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-text-color has-background" href="https://www.icloud.com/shortcuts/4d26d42daf1e43b0ae587d35cd154794" style="border-radius:10px;background-color:#0071a1">Download Slack Scrum Shortcut</a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:separator --></p>
+<hr class="wp-block-separator" />
+<!-- /wp:separator --></p>
+<p><!-- wp:media-text {"mediaId":422,"mediaLink":"https://heyscottyj.com/6a627b85-bba3-4f19-afc5-651fe7532a7e/","linkDestination":"custom","mediaType":"image","mediaWidth":15,"mediaSizeSlug":"thumbnail","isStackedOnMobile":false,"verticalAlignment":"center"} --></p>
+<div class="wp-block-media-text alignwide is-vertically-aligned-center" style="grid-template-columns:15% auto">
+<figure class="wp-block-media-text__media"><a href="https://www.paypal.com/donate?hosted_button_id=VJ5PZJ8KAKK2E"><img src="{{ site.baseurl }}/assets/2021/03/6A627B85-BBA3-4F19-AFC5-651FE7532A7E.png" alt="" class="wp-image-422 size-thumbnail" /></a></figure>
+<div class="wp-block-media-text__content"><!-- wp:paragraph --></p>
+<p>My work is driven, in large part, by caffeine. If this has been valuable to you and you'd like to support my work, <a href="https://www.paypal.com/donate?hosted_button_id=VJ5PZJ8KAKK2E">buying me a coffee would be lovely</a>. Thank you!</p>
+<p><!-- /wp:paragraph --></div>
+</div>
+<p><!-- /wp:media-text --></p>
+<p><!-- wp:paragraph --></p>
+<p>&nbsp;</p>
+<p><!-- /wp:paragraph --></p>

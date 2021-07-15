@@ -1,0 +1,35 @@
+---
+layout: post
+title: Easier Integration of Shortcuts and Slack with Data Jar
+date: 2020-08-26 11:30:50.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Shortcuts
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _wpas_done_all: '1'
+  _edit_last: '1'
+  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
+  mf2_syndication: a:0:{}
+
+permalink: "/2020/08/26/easier-integration-of-shortcuts-and-slack-with-data-jar/"
+---
+<p>Back on <a href="https://nestedfolderspodcast.com/podcast/episode-25-stack-of-agreements/">episode 25 of Nested Folders</a>, Rosemary Orchard and I discussed agreements and the many kinds of these that are important for effective collaboration.</p>
+<p>For me, a lot of these agreements end up getting supported by <a href="https://slack.com/">Slack</a>, which is great.</p>
+<p>I talked about my love for <a href="https://datajar.app">Data Jar</a> on <a href="https://www.relay.fm/automators/49">episode 49 of the Automators podcast</a>, and how it allows complex data to be easily reused by multiple different Shortcuts.</p>
+<p>This gave me an idea: what if I had a dictionary containing all the channel identifiers of my Slack workspaces? Then I could easily interact with them by web API.</p>
+<p><!--more--></p>
+<p>Even better, could I make this Data Jar dictionary with a Shortcut?</p>
+<p>Yes. <a href="https://www.icloud.com/shortcuts/cb1f51412d244c7085dfaf8ffe4447c0">Here you go</a>!</p>
+<p>As well, here are a few arguments to consider adding to the URL in the Shortcut for better utility:</p>
+<ul>
+<li>exclude_archived=true</li>
+<li>types=public_channel,private_channel</li>
+<li>limit=1000 (if you have a big/busy workspace)</li>
+</ul>
+<p>Lastly, I'd like to give a shoutout to <a href="https://medium.com/@jakebathman/setting-up-a-slack-app-for-use-with-ios-shortcuts-e8e16b15d0f3">this Medium post by Jake Bateman</a>, which got me rolling in how to use the Slack web API. Very useful!</p>

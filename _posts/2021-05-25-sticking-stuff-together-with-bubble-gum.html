@@ -1,0 +1,101 @@
+---
+layout: post
+title: "[v1.21] Sticking Stuff Together with Bubble Gum"
+date: 2021-05-25 21:16:11.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Shortcuts
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _last_editor_used_jetpack: block-editor
+  _edit_last: '1'
+  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
+  mf2_syndication: a:0:{}
+  _wpas_done_all: '1'
+
+permalink: "/2021/05/25/sticking-stuff-together-with-bubble-gum/"
+---
+<p><!-- wp:heading --></p>
+<h2><strong>v1.21 update</strong></h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Minor update</li>
+<li>Added Maps as a source for phone numbers in the Phone branch</li>
+<li>Added alert to Bookmarked URLs branch to align to all the others</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Download link below 👇🏻</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2><strong>v1.2 update</strong></h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Added branch for <a href="https://culturedcode.com/things/">Things</a>, using its <code>show</code> URL scheme <code>query</code> parameter to show a particular project, or else the <code>id</code> parameter to show a built-in list</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading --></p>
+<h2><strong>v1.1 update</strong></h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Added branch for <a href="https://www.devontechnologies.com/apps/devonthinktogo">DEVONthink To Go</a></li>
+<li>Added branch for <a href="https://www.craft.do/">Craft</a> (requires choosing the workspace to open when you actually use the URL, but hey, you play the hand you're dealt)</li>
+<li>Added branches for <a href="https://www.omnigroup.com/omnifocus">OmniFocus</a> 4 Beta</li>
+<li>Added branch for <a href="https://www.agenda.com/">Agenda</a> 13.1 Beta</li>
+<li>Added comment actions to capture changelog and protips</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:separator --></p>
+<hr class="wp-block-separator" />
+<!-- /wp:separator --></p>
+<p><!-- wp:paragraph --></p>
+<p>I was listening my pals <a href="https://podcast.productivityintech.com/">Jay Miller</a>, <a href="https://rosemaryorchard.com/">Rosemary Orchard</a>, and <a href="https://www.macsparky.com">David Sparks</a> discuss <a href="https://hookproductivity.com">Hook</a> on a <a href="https://www.relay.fm/automators/75">recent episode of the Automators podcast</a>, and got thinking about how often I benefit from linking across resources on my phone/iPad (or would like to benefit from it, if I actually did it more).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Some real examples:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Put a phone number in an OmniFocus task</li>
+<li>Reference an OmniFocus project in an Agenda note</li>
+<li>Add a location in a Note</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>And plenty more.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:more --><br />
+<!--more--><br />
+<!-- /wp:more --></p>
+<p><!-- wp:paragraph --></p>
+<p>So I got to thinking and assembled a new iOS Shortcut that I call Bubble Gum (because what better way to stick things together than with the stuff you have at hand?).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>I really like running this Shortcut from Spotlight on an iPad, so that I can get to it whenever. It lets you search various things you might have and copies links to them to your clipboard for insertion elsewhere. I also use this on my phone set to the <a href="https://support.apple.com/HT211781">Back Tap accessibility move</a>, because I can invoke that from anywhere.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>As an aside, iPadOS does this infuriating thing where after running the Shortcut from Spotlight, Spotlight still holds the focus of typing, but <code>⌘+space</code> will dismiss that (thanks to friends <a href="https://theuntitledsite.com">Christopher Lawley</a> and <a href="https://www.matthewcassinelli.com/">Matthew Cassinelli</a> for saving me from rage deleting my iPad).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Now, it wasn't until I was waaaaaay down the rabbit hole when the realization struck me: you can’t really link to a calendar event or note by url. That made me sad. So instead, I made the desired event or note details be captured in url-encoded JSON, and added that as a parameter in a url to run Bubble Gum later, which would identify the only possible event or note you mean to be referring to, and open it.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>This has been enormously useful for me, and I hope it is for you, too! I can see myself adding other branches here and iterating on this, so let me know if there is something else you'd find useful to add!</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:buttons {"contentJustification":"center"} --></p>
+<div class="wp-block-buttons is-content-justification-center"><!-- wp:button {"style":{"color":{"background":"#0071a1"}},"textColor":"white"} --></p>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-text-color has-background" href="https://www.icloud.com/shortcuts/8d5cec9d6b6242848f2c4fd0ca2176d4" style="background-color:#0071a1">Download the Bubble Gum Shortcut</a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></p>
+<p><!-- wp:separator --></p>
+<hr class="wp-block-separator" />
+<!-- /wp:separator --></p>
+<p><!-- wp:block {"ref":462} /--></p>
