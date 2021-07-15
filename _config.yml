@@ -29,6 +29,7 @@ twitter_username: heyscottyj
 page_excerpts: true
 show_excerpts: true
 excerpt_separator: <!--more-->
+paginate: 10
 
 minima:
   social_links:
@@ -38,6 +39,7 @@ minima:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
