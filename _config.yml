@@ -41,6 +41,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-remote-theme
+remote_theme: pages-themes/slate@v0.2.0
 
 # Exclude from processing.
 # The following items will not be processed, by default.
